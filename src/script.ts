@@ -6,5 +6,5 @@ export default async function (api: LoreScriptApi): Promise<FormattedString> {
 
     const rollLabel: FormattedString = fmt`${api.user.info.fullName}, lanci ${i}${api.item.name}${i}, la riprendi ${u}al volo${u} ed esce: ${b}${roll}${b}!`
 
-    return fmt`${rollLabel}\n\nArgs: ${api.args.args.join(', ')}`
+    return fmt`${rollLabel}\n\nArgs: ${api.args.content.join(', ')}`
 }
