@@ -8,7 +8,7 @@
   },
   "dependencies": {
     "@grammyjs/parse-mode": "^2.2.0",
-    "lore-game-bot-script-api": "^0.1.8"
+    "lore-game-bot-script-api": "^0.1.9"
   },
   "devDependencies": {
     "tsx": "^4.7.0",
