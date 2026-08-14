@@ -1,6 +1,7 @@
 # LoreGameBot Script Dev Environment
 
-This project provides type safety for @LoreGameBot telegram bot custom scripts.
+This project provides full type safety for @LoreGameBot telegram bot custom scripts. 
+Create your own custom execution script for your custom item and catch errors before you apply it!
 
 
 ## Prerequisites
