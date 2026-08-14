@@ -24,7 +24,7 @@ const user: LoreScriptUser = {
     travel: {
         currentSeasonName: `L'inferno 🔥`,  
     },
-    clan: {
+    company: {
         name: 'la FRODE sviluppata della galassia',  
     }
 }

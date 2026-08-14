@@ -1,7 +1,7 @@
 import { describe, it, expect } from 'vitest'
 import script from '../script'
 import { FormattedString } from '@grammyjs/parse-mode'
-import { LoreScriptApi, LoreScriptUserNoClan } from 'lore-game-bot-script-api'
+import { LoreScriptApi, LoreScriptUserNoCompany } from 'lore-game-bot-script-api'
 
 describe('script', () => {
     it('exports a default function', () => {
@@ -31,12 +31,12 @@ describe('script', () => {
             travel: {
                 currentSeasonName: `L'inferno 🔥`,  
             },
-            clan: {
+            company: {
                 name: 'la FRODE sviluppata della galassia',  
             }
         },
         {
-            args: []
+            content: []
         })
 
         const result: FormattedString = await script(api)
@@ -68,12 +68,12 @@ describe('script', () => {
             travel: {
                 currentSeasonName: `L'inferno 🔥`,  
             },
-            clan: {
+            company: {
                 name: 'la FRODE sviluppata della galassia',  
             }
         },
         {
-            args: ['arg1', 'arg2']
+            content: ['arg1', 'arg2']
         })
 
         const result: FormattedString = await script(api)
@@ -105,12 +105,12 @@ describe('script', () => {
             travel: {
                 currentSeasonName: `L'inferno 🔥`,  
             },
-            clan: {
+            company: {
                 name: 'la FRODE sviluppata della galassia',  
             }
         },
         {
-            args: [undefined, undefined, undefined, undefined, undefined, undefined]
+            content: [undefined, undefined, undefined, undefined, undefined, undefined]
         })
 
         const result: FormattedString = await script(api)
@@ -120,7 +120,7 @@ describe('script', () => {
         expect(result.entities).toBeDefined()
     })
 
-    it('runs for clanless user', async () => {
+    it('runs for companyless user', async () => {
         const api: LoreScriptApi = new LoreScriptApi({
             name: 'una moneta',
         }, 
@@ -142,10 +142,10 @@ describe('script', () => {
             travel: {
                 currentSeasonName: `L'inferno 🔥`,  
             },
-            clan: new LoreScriptUserNoClan()
+            company: new LoreScriptUserNoCompany()
         },
         {
-            args: ['arg1', 'arg2']
+            content: ['arg1', 'arg2']
         })
         
         const result: FormattedString = await script(api)
@@ -177,12 +177,12 @@ describe('script', () => {
             travel: {
                 currentSeasonName: `L'inferno 🔥`,  
             },
-            clan: {
+            company: {
                 name: 'la FRODE sviluppata della galassia',  
             }
         },
         {
-            args: ['arg1', 'arg2']
+            content: ['arg1', 'arg2']
         })
 
         const result: FormattedString = await script(api)
@@ -214,12 +214,12 @@ describe('script', () => {
             travel: {
                 currentSeasonName: `L'inferno 🔥`,  
             },
-            clan: {
+            company: {
                 name: 'la FRODE sviluppata della galassia',  
             }
         },
         {
-            args: ['arg1', 'arg2']
+            content: ['arg1', 'arg2']
         })
 
         const result: FormattedString = await script(api)
